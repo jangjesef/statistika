@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Statistická analýza velikostí bot</title>
+    <meta charset="utf-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: white;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        .section {
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            page-break-after: avoid;
+        }
+        ul {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Statistická analýza velikostí bot</h1>
+
+        <div class="section">
+            <h2>1. Základní charakteristiky</h2>
+            <table>
+                <tr><th>Charakteristika</th><th>Hodnota</th></tr>
+                <tr><td>Aritmetický průměr</td><td>39.375</td></tr>
+                <tr><td>Modus</td><td>39</td></tr>
+                <tr><td>Medián</td><td>39</td></tr>
+                <tr><td>Rozptyl</td><td>5.203</td></tr>
+                <tr><td>Směrodatná odchylka</td><td>2.281</td></tr>
+                <tr><td>Variační koeficient</td><td>5.79%</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>2. Grafy</h2>
+            <img src="statisticke_grafy.png" alt="Statistické grafy">
+        </div>
+
+        <div class="section">
+            <h2>3. Tabulka četností</h2>
+            <table>
+                <tr>
+                    <th>Velikost boty</th>
+                    <th>Absolutní četnost</th>
+                    <th>Relativní četnost</th>
+                    <th>Relativní četnost (%)</th>
+                </tr>
+
+                <tr>
+                    <td>35</td>
+                    <td>5</td>
+                    <td>0.078</td>
+                    <td>7.8%</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>3</td>
+                    <td>0.047</td>
+                    <td>4.7%</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>5</td>
+                    <td>0.078</td>
+                    <td>7.8%</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>8</td>
+                    <td>0.125</td>
+                    <td>12.5%</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>12</td>
+                    <td>0.188</td>
+                    <td>18.8%</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>10</td>
+                    <td>0.156</td>
+                    <td>15.6%</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>9</td>
+                    <td>0.141</td>
+                    <td>14.1%</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>7</td>
+                    <td>0.109</td>
+                    <td>10.9%</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>3</td>
+                    <td>0.047</td>
+                    <td>4.7%</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>2</td>
+                    <td>0.031</td>
+                    <td>3.1%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>4. Závěry</h2>
+            <ul>
+                <li>Nejčastější velikost bot je 39</li>
+                <li>Průměrná velikost bot je 39.375</li>
+                <li>50% hodnot leží pod velikostí 39</li>
+                <li>Rozptyl velikostí je 5.203, což indikuje variabilitu dat</li>
+                <li>Směrodatná odchylka 2.281 ukazuje průměrnou odchylku od průměru</li>
+                <li>Variační koeficient 5.79% značí relativní variabilitu souboru</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
