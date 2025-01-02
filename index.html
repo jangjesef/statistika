@@ -18,17 +18,18 @@
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
         }
-        code {
-            background-color: #f5f5f5;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-family: 'Courier New', Courier, monospace;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
-        pre {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
         }
         img {
             max-width: 100%;
@@ -37,71 +38,177 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        ul {
-            padding-left: 25px;
+        .section {
+            margin: 30px 0;
         }
-        .bash {
-            background-color: #282c34;
-            color: #abb2bf;
-            padding: 15px;
+        .download-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        .download-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #1a2634;
+        }
+        .download-button svg {
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
-    <h1>Statistická analýza velikostí bot</h1>
+    <div class="container">
+        <h1>Statistická analýza velikostí bot</h1>
 
-    <p>Tento projekt obsahuje statistickou analýzu dat o velikostech bot včetně vizualizací a výpočtů základních statistických charakteristik.</p>
+        <div class="section">
+            <h2>1. Základní charakteristiky</h2>
+            <table>
+                <tr><th>Charakteristika</th><th>Hodnota</th></tr>
+                <tr><td>Aritmetický průměr</td><td>39.375</td></tr>
+                <tr><td>Modus</td><td>39</td></tr>
+                <tr><td>Medián</td><td>39</td></tr>
+                <tr><td>Rozptyl</td><td>5.203</td></tr>
+                <tr><td>Směrodatná odchylka</td><td>2.281</td></tr>
+                <tr><td>Variační koeficient</td><td>5.79%</td></tr>
+            </table>
+        </div>
 
-    <h2>Obsah projektu</h2>
-    <ul>
-        <li><code>statisticka_analyza.py</code> - hlavní skript pro analýzu dat</li>
-        <li><code>statisticke_grafy.png</code> - vizualizace dat (sloupcový graf, koláčový graf, krabicový graf, histogram)</li>
-        <li><code>statisticka_analyza.html</code> - interaktivní HTML report</li>
-        <li><code>statisticka_analyza.pdf</code> - PDF verze reportu</li>
-        <li><code>requirements.txt</code> - seznam potřebných Python knihoven</li>
-    </ul>
-
-    <h2>Instalace</h2>
-    <pre class="bash">pip install -r requirements.txt</pre>
-
-    <h2>Spuštění analýzy</h2>
-    <pre class="bash">python3 statisticka_analyza.py</pre>
-
-    <h2>Výstupy</h2>
-    <ol>
-        <li>
-            <strong>Základní charakteristiky:</strong>
-            <ul>
-                <li>Aritmetický průměr</li>
-                <li>Modus</li>
-                <li>Medián</li>
-                <li>Rozptyl</li>
-                <li>Směrodatná odchylka</li>
-                <li>Variační koeficient</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Vizualizace:</strong>
-            <ul>
-                <li>Sloupcový diagram četností</li>
-                <li>Koláčový diagram rozložení</li>
-                <li>Krabicový graf</li>
-                <li>Histogram</li>
-            </ul>
+        <div class="section">
+            <h2>2. Grafy</h2>
             <img src="statisticke_grafy.png" alt="Statistické grafy">
-        </li>
-        <li>
-            <strong>Tabulky četností:</strong>
-            <ul>
-                <li>Absolutní četnosti</li>
-                <li>Relativní četnosti</li>
-                <li>Procentuální četnosti</li>
-            </ul>
-        </li>
-    </ol>
+        </div>
 
-    <h2>Autor</h2>
-    <p>Jan Gajdoš</p>
+        <div class="section">
+            <h2>3. Tabulka četností</h2>
+            <table>
+                <tr>
+                    <th>Velikost boty</th>
+                    <th>Absolutní četnost</th>
+                    <th>Relativní četnost</th>
+                    <th>Relativní četnost (%)</th>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>5</td>
+                    <td>0.078</td>
+                    <td>7.8%</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>3</td>
+                    <td>0.047</td>
+                    <td>4.7%</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>5</td>
+                    <td>0.078</td>
+                    <td>7.8%</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>8</td>
+                    <td>0.125</td>
+                    <td>12.5%</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>12</td>
+                    <td>0.188</td>
+                    <td>18.8%</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>10</td>
+                    <td>0.156</td>
+                    <td>15.6%</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>9</td>
+                    <td>0.141</td>
+                    <td>14.1%</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>7</td>
+                    <td>0.109</td>
+                    <td>10.9%</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>3</td>
+                    <td>0.047</td>
+                    <td>4.7%</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>2</td>
+                    <td>0.031</td>
+                    <td>3.1%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>4. Závěry</h2>
+            <ul>
+                <li>Nejčastější velikost bot je 39</li>
+                <li>Průměrná velikost bot je 39.375</li>
+                <li>50% hodnot leží pod velikostí 39</li>
+                <li>Rozptyl velikostí je 5.203, což indikuje variabilitu dat</li>
+                <li>Směrodatná odchylka 2.281 ukazuje průměrnou odchylku od průměru</li>
+                <li>Variační koeficient 5.79% značí relativní variabilitu souboru</li>
+            </ul>
+        </div>
+
+        <div class="download-section">
+            <h2>Ke stažení</h2>
+            <div class="download-buttons">
+                <a href="statisticka_analyza.py" class="download-button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 12l-4-4h2.5V3h3v5H12L8 12z"/>
+                        <path d="M14 13v1H2v-1h12z"/>
+                    </svg>
+                    Python skript
+                </a>
+                <a href="statisticke_grafy.png" class="download-button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 12l-4-4h2.5V3h3v5H12L8 12z"/>
+                        <path d="M14 13v1H2v-1h12z"/>
+                    </svg>
+                    Grafy (PNG)
+                </a>
+                <a href="statisticka_analyza.pdf" class="download-button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 12l-4-4h2.5V3h3v5H12L8 12z"/>
+                        <path d="M14 13v1H2v-1h12z"/>
+                    </svg>
+                    Report (PDF)
+                </a>
+                <a href="requirements.txt" class="download-button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 12l-4-4h2.5V3h3v5H12L8 12z"/>
+                        <path d="M14 13v1H2v-1h12z"/>
+                    </svg>
+                    Requirements
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html> 
