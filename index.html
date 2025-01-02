@@ -110,6 +110,32 @@
             border-radius: 10px;
             margin-bottom: 30px;
         }
+        .methodology {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .methodology h3 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+        .methodology p {
+            margin-bottom: 15px;
+        }
+        .formula {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+        }
+        .graph-explanation {
+            background-color: #fff8f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
     </style>
 </head>
 <body>
@@ -201,6 +227,74 @@
                 <li>Směrodatná odchylka 2.281 ukazuje průměrnou odchylku od průměru</li>
                 <li>Variační koeficient 5.79% značí relativní variabilitu souboru</li>
             </ul>
+        </div>
+
+        <div class="methodology">
+            <h2>Postup řešení</h2>
+            
+            <h3>1. Sběr a příprava dat</h3>
+            <p>Nejprve jsem shromáždil data o velikostech bot od 64 studentů. Tato data jsem uspořádal do přehledné tabulky, kde jsem zaznamenal jednotlivé velikosti bot (od 35 do 44) a počet studentů s danou velikostí.</p>
+
+            <h3>2. Výpočet četností</h3>
+            <p>Pro každou velikost boty jsem vypočítal:</p>
+            <ul>
+                <li><strong>Absolutní četnost</strong> - počet výskytů dané velikosti</li>
+                <li><strong>Relativní četnost</strong> - podíl absolutní četnosti k celkovému počtu hodnot (64)</li>
+                <li><strong>Procentuální četnost</strong> - relativní četnost vyjádřená v procentech</li>
+            </ul>
+            <p>Například pro velikost 39:</p>
+            <div class="formula">
+                Relativní četnost = 12/64 = 0.188
+                Procentuální četnost = 0.188 × 100 = 18.8%
+            </div>
+
+            <h3>3. Výpočet charakteristik polohy</h3>
+            <p><strong>Aritmetický průměr</strong> jsem vypočítal jako vážený průměr, kde váhou je četnost dané velikosti:</p>
+            <div class="formula">
+                Průměr = (35×5 + 36×3 + 37×5 + ... + 44×2) / 64 = 39.375
+            </div>
+            
+            <p><strong>Modus</strong> (nejčastější hodnota) je velikost 39, protože má nejvyšší četnost (12 studentů).</p>
+            
+            <p><strong>Medián</strong> je také 39, protože při seřazení všech 64 hodnot je to prostřední hodnota (32. a 33. hodnota).</p>
+
+            <h3>4. Výpočet charakteristik variability</h3>
+            <p><strong>Rozptyl</strong> měří variabilitu dat kolem průměru. Vypočítá se jako průměr druhých mocnin odchylek od průměru:</p>
+            <div class="formula">
+                Rozptyl = Σ((x - průměr)² × četnost) / n = 5.203
+            </div>
+            
+            <p><strong>Směrodatná odchylka</strong> je odmocnina z rozptylu:</p>
+            <div class="formula">
+                Směrodatná odchylka = √5.203 = 2.281
+            </div>
+            
+            <p><strong>Variační koeficient</strong> vyjadřuje relativní variabilitu vzhledem k průměru:</p>
+            <div class="formula">
+                Variační koeficient = (2.281 / 39.375) × 100 = 5.79%
+            </div>
+        </div>
+
+        <div class="graph-explanation">
+            <h2>Vysvětlení grafů</h2>
+            
+            <h3>Sloupcový diagram (vlevo nahoře)</h3>
+            <p>Tento graf zobrazuje absolutní četnosti jednotlivých velikostí bot. Na vodorovné ose jsou velikosti bot (35-44) a na svislé ose počet studentů s danou velikostí. Výška sloupce přímo odpovídá počtu studentů. Z grafu je jasně vidět, že nejvíce studentů má velikost 39 (12 studentů).</p>
+            
+            <h3>Koláčový diagram (vpravo nahoře)</h3>
+            <p>Zobrazuje procentuální zastoupení jednotlivých velikostí bot. Každý výseč představuje jednu velikost boty a její velikost odpovídá procentu studentů s touto velikostí. Například velikost 39 zabírá 18.8% celého koláče.</p>
+            
+            <h3>Krabicový diagram (vlevo dole)</h3>
+            <p>Tento graf poskytuje informace o rozložení dat:</p>
+            <ul>
+                <li>Střední čára představuje medián (39)</li>
+                <li>Horní a dolní okraj "krabice" představují horní a dolní kvartil</li>
+                <li>"Vousy" ukazují minimální (35) a maximální (44) hodnoty</li>
+                <li>Výška krabice ukazuje, kde leží 50% všech hodnot</li>
+            </ul>
+            
+            <h3>Histogram (vpravo dole)</h3>
+            <p>Podobně jako sloupcový diagram zobrazuje četnosti, ale data jsou uspořádána do spojitého grafu, který ukazuje rozložení velikostí bot. Tvar histogramu naznačuje, že data přibližně odpovídají normálnímu rozdělení s vrcholem kolem velikosti 39-40.</p>
         </div>
 
         <div class="download-section">
