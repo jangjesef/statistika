@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistická analýza velikostí bot</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul {
+            padding-left: 25px;
+        }
+        .bash {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Statistická analýza velikostí bot</h1>
+
+    <p>Tento projekt obsahuje statistickou analýzu dat o velikostech bot včetně vizualizací a výpočtů základních statistických charakteristik.</p>
+
+    <h2>Obsah projektu</h2>
+    <ul>
+        <li><code>statisticka_analyza.py</code> - hlavní skript pro analýzu dat</li>
+        <li><code>statisticke_grafy.png</code> - vizualizace dat (sloupcový graf, koláčový graf, krabicový graf, histogram)</li>
+        <li><code>statisticka_analyza.html</code> - interaktivní HTML report</li>
+        <li><code>statisticka_analyza.pdf</code> - PDF verze reportu</li>
+        <li><code>requirements.txt</code> - seznam potřebných Python knihoven</li>
+    </ul>
+
+    <h2>Instalace</h2>
+    <pre class="bash">pip install -r requirements.txt</pre>
+
+    <h2>Spuštění analýzy</h2>
+    <pre class="bash">python3 statisticka_analyza.py</pre>
+
+    <h2>Výstupy</h2>
+    <ol>
+        <li>
+            <strong>Základní charakteristiky:</strong>
+            <ul>
+                <li>Aritmetický průměr</li>
+                <li>Modus</li>
+                <li>Medián</li>
+                <li>Rozptyl</li>
+                <li>Směrodatná odchylka</li>
+                <li>Variační koeficient</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Vizualizace:</strong>
+            <ul>
+                <li>Sloupcový diagram četností</li>
+                <li>Koláčový diagram rozložení</li>
+                <li>Krabicový graf</li>
+                <li>Histogram</li>
+            </ul>
+            <img src="statisticke_grafy.png" alt="Statistické grafy">
+        </li>
+        <li>
+            <strong>Tabulky četností:</strong>
+            <ul>
+                <li>Absolutní četnosti</li>
+                <li>Relativní četnosti</li>
+                <li>Procentuální četnosti</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Autor</h2>
+    <p>Jan Gajdoš</p>
+</body>
+</html> 
